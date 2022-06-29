@@ -1,9 +1,18 @@
 import random
 
-def play():
+def print_welcome_message():
     print("************************************")
     print("           hangman game             ")
     print("************************************")
+
+    print("Level")
+    print("(1) Easy", "(2) Middle", "(3) Hard")
+
+
+def play():
+    print_welcome_message()
+
+    nivel = int(input("difficult: "))
 
     #number = 67
     number = round(random.randrange(1, 100))
@@ -11,10 +20,6 @@ def play():
     max_retries = 5
     points = 1000
     lost_points = 0
-
-    print("Level")
-    print("(1) Easy", "(2) Middle", "(3) Hard")
-    nivel = int(input("difficult: "))
 
     if(nivel == 1):
         max_retries = 20
